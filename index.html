@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="CSS/header.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.cn/cdnjs/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>DCP-民主国家党代表会议委员会</title>
+</head>
+<style>
+    .header-select-logo {
+        order: 1;
+    }
+</style>
+<style>
+    .header-logo{
+        order:2;
+    }
+    .header-other{
+        order:3;
+        width:10px;
+    }
+    #Sidepanel {
+        width:80%;
+        height: 100%;
+        background-color: #0a8585;
+        transform: translateX(-100%) translateY(0) translateZ(0);
+        will-change: transform;
+        transition: transform .45s cubic-bezier(.2,.61,.42,.97);
+        position: fixed;
+        opacity: 0.8;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+    @media (max-width: 991.98px){
+        .sidepanel1 #Sidepanel{
+            transform: translateX(0) translateY(0) translateZ(0);
+        }
+        #Main-container {
+            left:0;
+        }
+        #relation-phrase{
+            display: none;
+        }
+    }
+    @media (min-width: 992px){
+        #Sidepanel{
+            width:250px;
+            transform: translateX(0) translateY(0) translateZ(0);
+            opacity: 1.0;
+        }
+        #closebtn{
+            color: #0a8585;
+        }
+    }
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #0492f1;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+    }
+    .openbtn:hover {
+        background-color:#444;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .x{color: azure}
+    .x:hover{
+        cursor: pointer;
+        color: aquamarine;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+</style>
+<script>
+    function openNav(){
+        document.getElementById("only-header").className = "sidepanel1 sidepanel2";
+    }
+    function closeNav(){
+        document.getElementById("only-header").className = "sidepanel2";
+    }
+
+
+</script>
+<body style="margin: 0">
+    <header id="only-header" class="sidepanel2">
+
+        <div id="Sidepanel" class="sidepanel">  <!--隐藏的侧边栏-->
+            <!--侧边顶栏-->
+            <div  style="display: flex;justify-content: space-between;align-items: center">
+                <a style="opacity: 0">×</a>
+                <a style="color: aliceblue;font-size: 24px">工作目录</a>
+                <a id="closebtn" class="closebtn x" style="font-size: 35px;float:right;" onclick="closeNav()">×</a>
+
+            </div>
+            <!--<div>
+                <p id="relation-phrase" style="text-align: center;font-size: 20px;padding-top: 2px;margin-top: 0px">工作目录</p>
+            </div>-->
+        </div>
+
+
+        <div class="header-select-logo" >
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+
+
+        <div class="header-logo">
+            <p style="font-size: small;color: aliceblue">DCP民主國家黨/民主国家党 办公进步委员会</p>
+        </div>
+
+
+        <div class="header-other" style="">
+
+        </div>
+
+    </header>
+
+
+
+    <div id="Main-container" class="main-container">  <!--主区域-->
+        <div id="Main-frame" class="main-frame">     <!--首页-->
+
+        </div>
+    </div>
+</body>
+</html>
